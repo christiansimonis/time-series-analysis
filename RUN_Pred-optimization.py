@@ -5,7 +5,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------
 __author__ = "Christian Simonis"
 __copyright__ = "Copyright 2021"
-__version__ = "2.1"
+__version__ = "1.0"
 __maintainer__ = "Christian Simonis"
 __email__ = "christian.Simonis.1989@gmail.com"
 __status__ = "work in progress"
@@ -196,4 +196,6 @@ print('_________________')
 print('Predictive_weights:')
 print(predictive_weights)
 print('_________________')
+
+#-----------------------------------------------------------------------------------------------------------------------------------
 

@@ -137,3 +137,5 @@ plt.ylabel('Closing Price', fontsize=16)
 plt.legend()
 plt.title(' "Neural Prophet" model (blue) and "Time Series Analysis" model (violet) ', fontsize=16)
 plt.show()
+
+#-----------------------------------------------------------------------------------------------------------------------------------

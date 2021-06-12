@@ -258,5 +258,4 @@ plt.fill(np.concatenate([pd.DatetimeIndex(const_time), pd.DatetimeIndex(const_ti
 plt.legend(loc='upper left', shadow=False, ncol=1)
 plt.show()  
 
-
 #-----------------------------------------------------------------------------------------------------------------------------------

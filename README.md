@@ -1,8 +1,9 @@
-# time_series_analysis (TSA)
+# time-series-analysis (TSA)
 
 There have been several attempts to predict financial markets and stock prices using time series analysis. Many of them were not successful!
 Neither trading nor investing decisions should be influenced by this repository or the code, which is built only to introduce and demonstrate a methodology for time series modeling.
 No responsibility is taken for correctness or completeness of historic, current or future data, models and / or predictions!
+https://github.com/christiansimonis/time-series-analysis
 
 ![alt text](https://github.com/christiansimonis/time-series-analysis/blob/master/vis/forecast_exmpl.JPG)
 

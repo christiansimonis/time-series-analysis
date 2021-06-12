@@ -5,7 +5,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------
 __author__ = "Christian Simonis"
 __copyright__ = "Copyright 2021"
-__version__ = "2.1"
+__version__ = "1.0"
 __maintainer__ = "Christian Simonis"
 __email__ = "christian.Simonis.1989@gmail.com"
 __status__ = "work in progress"
@@ -85,7 +85,7 @@ class Stock_Analysis:
                  DF:            Dataframe, consisting of time and closing price information
         """
             
-        #ldownload with Yahoo Finance API
+        #download with Yahoo Finance API
         
         if  hasattr(self,"end") == False:
             stocks = yfin.download(Stock_Name, start) # till most recent value
@@ -370,7 +370,7 @@ class Stock_Analysis:
         plt.show()
         
          
-        #rprovide result
+        #provide result
         self.optimized_weights = opt_w
         self.optimized_weights.head()
         return opt_w
