@@ -1,5 +1,6 @@
 # time-series-analysis (TSA)
 
+
 There have been several attempts to predict financial markets and stock prices using time series analysis. Many of them were not successful!
 Neither trading nor investing decisions should be influenced by this repository or the code, which is built only to introduce and demonstrate a methodology for time series modeling.
 No responsibility is taken for correctness or completeness of historic, current or future data, models, information and / or predictions!
@@ -68,5 +69,8 @@ Thanks and reference to:
 * scipy,                               v1.5.2,                        BSD 3-Clause "New" or "Revised" License,     Copyright (c) 2001-2002, Enthought, Inc.  2003-2019, SciPy Developers.
 * neuralprophet,                       v0.2.7,                        MIT License,                                 Copyright (c) 2020, Oskar Triebe.
 
-# Contact
-* [Link](https://www.linkedin.com/in/christiansimonis/)
+# Contact and collaboration
+* [LinkedIn](https://www.linkedin.com/in/christiansimonis/)
+* [GitHub](https://github.com/login?return_to=%2Fchristiansimonis)
+* [Forks](https://github.com/christiansimonis/time-series-analysis/network/members)
+* [Stargazers](https://github.com/christiansimonis/time-series-analysis/stargazers)
