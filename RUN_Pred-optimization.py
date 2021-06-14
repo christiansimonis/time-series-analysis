@@ -158,14 +158,9 @@ for i in range(len(Stock_Name)):
     Predictions_of_stocks.loc[:,Stock_Name[i]] = forecast_future
 
 
-
-
-#Predictive portfilio optimization based on forecast
+#Calculate normed prediction
 Predictions_of_stocks.reset_index()
 Predictive_Portfolio = Predictions_of_stocks.set_index(['Date']).copy()
-predictive_weights = Portfolio.optimize_pf(Predictive_Portfolio, nr_mc, risk_free_rate)
-plt.show
-
 
 
 #Visualize normed prediction
@@ -179,6 +174,25 @@ plt.title(' Expected normed value of forecasting basis for portfolio optimizatio
 plt.show()
 
 
+#Return expectations
+lag = 1 #1 day 
+daily_return = normed_stocks.pct_change(lag).iloc[lag:,:]*100 # in %
+daily_return.corr() # correlation of assets
+
+#Violin plot
+sns.violinplot(data=daily_return, palette="Set3", bw=.2, cut=1, linewidth=1)
+plt.xlabel('Stocks', fontsize=16)
+plt.ylabel('Predicted daily returns in %', fontsize=16)
+plt.title('Predicted distribution of expected daily returns of each contributor', fontsize=16)
+plt.show()
+
+
+#Predictive portfilio optimization based on forecast
+predictive_weights = Portfolio.optimize_pf(Predictive_Portfolio, nr_mc, risk_free_rate)
+plt.show
+
+
+
 #Bar plot of optimized weights
 sns.set_theme(style="whitegrid")
 ax = sns.barplot(data = predictive_weights, palette="Blues_d")
@@ -186,6 +200,9 @@ plt.xlabel('Stocks', fontsize=16)
 plt.ylabel('Weights of asset allocation', fontsize=16)
 plt.title('Portfolio allocation based on predictive optimization', fontsize=16)
 plt.show()
+
+
+
 
 #Provide optimized weights
 print('Comparison:')
@@ -196,6 +213,7 @@ print('_________________')
 print('Predictive_weights:')
 print(predictive_weights)
 print('_________________')
+
 
 #-----------------------------------------------------------------------------------------------------------------------------------
 

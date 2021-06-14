@@ -7,6 +7,8 @@ No responsibility is taken for correctness or completeness of historic, current 
 https://github.com/christiansimonis/time-series-analysis
 
 ![alt text](https://github.com/christiansimonis/time-series-analysis/blob/master/vis/forecast_exmpl.JPG)
+![alt text](https://github.com/christiansimonis/time-series-analysis/blob/master/vis/pred_dailyret.JPG)
+
 
 
 # 1) Stock_TSA class
