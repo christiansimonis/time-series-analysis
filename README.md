@@ -19,7 +19,7 @@ Information links (no promotion): https://www.coursera.org/learn/financial-marke
  
 # 2) RUN files demonstrate use cases, such as:
 
-* 2.1) RUN_Stock_historic_TSA: evaluates the performance of class Stock_TSA based on historic data, using the index Nasdaq 100.
+* 2.1) RUN_Stock_historic_TSA: evaluates the performance of the Stock_TSA class based on historical data, using the Nasdaq 100 index as an example.
 
 ![alt text](https://github.com/christiansimonis/time-series-analysis/blob/master/vis/res_eval.JPG) 
 ![alt text](https://github.com/christiansimonis/time-series-analysis/blob/master/vis/pred_eval.JPG)
@@ -48,7 +48,7 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
 DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
 THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 # Acknowledgements
@@ -57,14 +57,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 * https://pypi.org/project/yfinance/
 
 Thanks and reference to:
-(Name,                                 Version,                      License)  
-* FinQuant,                            0.2.2,                        MIT License,                                 Copyright (C) 2019, Frank Milthaler.             
-* numpy,                               1.19.5,                       BSD,                                         Copyright (c) 2005-2020, NumPy Developers.   
-* yfinance,                            0.1.59,                       Apache License, Version 2.0,                 Copyright (c) January 2004, Ran Aroussi.
-* matplotlib,                          3.4.2,                        Python Software Foundation License,          Copyright (c) 2002 - 2012, John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2021 The Matplotlib development team.
-* scikit-learn,                        0.23.1,                       BSD 3-Clause License,                        Copyright (c) 2007-2021, The scikit-learn developers.
-* pandas,                              1.2.4,                        BSD 3-Clause License                         Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team.
-* seaborn,                             0.11.1,                       BSD 3-Clause "New" or "Revised" License,     Copyright (c) 2012-2021, Michael L. Waskom.
-* scipy,                               1.5.2,                        BSD 3-Clause "New" or "Revised" License,     Copyright (c) 2001-2002, Enthought, Inc.  2003-2019, SciPy Developers.
-* neuralprophet,                       0.2.7,                        MIT License,                                 Copyright (c) 2020, Oskar Triebe.
+(Name,                                 Version,                       License)  
+* FinQuant,                            v0.2.2,                        MIT License,                                 Copyright (c) 2019, Frank Milthaler.             
+* numpy,                               v1.19.5,                       BSD,                                         Copyright (c) 2005-2020, NumPy Developers.   
+* yfinance,                            v0.1.59,                       Apache License, Version 2.0,                 Copyright (c) January 2004, Ran Aroussi.
+* matplotlib,                          v3.4.2,                        Python Software Foundation License,          Copyright (c) 2002 - 2012, John Hunter, Darren Dale, Eric Firing, Michael Droettboom and the Matplotlib development team; 2012 - 2021 The Matplotlib development team.
+* scikit-learn,                        v0.23.1,                       BSD 3-Clause License,                        Copyright (c) 2007-2021, The scikit-learn developers.
+* pandas,                              v1.2.4,                        BSD 3-Clause License                         Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team.
+* seaborn,                             v0.11.1,                       BSD 3-Clause "New" or "Revised" License,     Copyright (c) 2012-2021, Michael L. Waskom.
+* scipy,                               v1.5.2,                        BSD 3-Clause "New" or "Revised" License,     Copyright (c) 2001-2002, Enthought, Inc.  2003-2019, SciPy Developers.
+* neuralprophet,                       v0.2.7,                        MIT License,                                 Copyright (c) 2020, Oskar Triebe.
 
+# Contact
+* [Link](https://www.linkedin.com/in/christiansimonis/)
