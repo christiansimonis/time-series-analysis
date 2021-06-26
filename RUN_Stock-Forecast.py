@@ -65,6 +65,8 @@ N = 3                   # Number of GP optimization runs
 split_factor = 0.5      # Train test split
 option = 1              # User coice: 1 = real prediction , 2 = backtest
 
+#-----------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -107,7 +109,11 @@ forecast_horizon=(1-split_factor)*(np.max(Time_idx)-np.min(Time_idx)) #according
 
 
 #Fit neural prophet
-nn_pr = NeuralProphet(seasonality_reg=0.5, seasonality_mode='multiplicative') 
+nn_pr = NeuralProphet(
+    yearly_seasonality=1,
+    weekly_seasonality=False,
+    daily_seasonality=False,
+    seasonality_reg=0.7) 
 nn_pr.fit(data, freq="D")  
 
 
