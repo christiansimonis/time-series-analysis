@@ -52,8 +52,8 @@ import datetime as dt                                         # https://docs.pyt
 #General parameters
 Stock_Name = ["^NDX"]   # NASDAQ 100 taken from Yahoo Finance ticker
 start="2015-06-09"      # start date, from which data is loaded till today
-L = 3                   # Length scale as GP kernel parameter
-N = 3                   # Number of GP optimization runs
+L = 1.1                 # Length scale as GP kernel parameter
+N = 2                   # Number of GP optimization runs
 split_factor = 0.65     # Train test split
 option = 2              # User coice: 1 = real prediction , 2 = backtest
 
@@ -195,6 +195,7 @@ const_sigma = np. array([])
 const_time = np. array([])
 const_time_sc = np. array([])
 naive_benchmark = np. array([])
+target = np. array([])
 
 
 
@@ -214,6 +215,7 @@ for i in range(len(Time_training),len(time)-1-horizon,steps):
         
         Time_test_c = time[i+1:].reshape(-1, 1)
         y_training_c = y[0:i]
+        y_test_c = y[i+1:].reshape(-1, 1)
         
         
         
@@ -237,6 +239,7 @@ for i in range(len(Time_training),len(time)-1-horizon,steps):
         const_pred = np.append(const_pred,forecast_future_c[horizon])
         const_sigma = np.append(const_sigma,sigma_future_c[horizon])
         const_time = np.append(const_time,Time_test_c[horizon])
+        target = np.append(target,y_test_c[horizon])
         const_time_sc = np.append(const_time_sc,Time_test_sc[horizon])
         naive_benchmark = np.append(naive_benchmark,y_training_c[-1])# use naive benchmark
         
@@ -248,8 +251,9 @@ for i in range(len(Time_training),len(time)-1-horizon,steps):
 
 #Visualization of value-add compared to naive prediction
 plt.scatter(pd.DatetimeIndex(Time),Stock, label = Stock_Name)
-plt.plot(pd.DatetimeIndex(const_time),const_pred,'k-.',linewidth=4, label = 'Prediction with constant horizon')
-plt.plot(pd.DatetimeIndex(const_time),naive_benchmark,'c-.',linewidth=4, label = 'Naive prediction as benchmark')
+plt.plot(pd.DatetimeIndex(const_time),const_pred,'ko-.',linewidth=4, label = 'Prediction with constant horizon')
+plt.plot(pd.DatetimeIndex(const_time),naive_benchmark,'co-.',linewidth=4, label = 'Naive prediction as benchmark')
+plt.plot(pd.DatetimeIndex(const_time),target,'ro',linewidth=6, label = 'Actual target at evaluation point')
 plt.xlabel('Time', fontsize=16)
 plt.ylabel('Closing Price', fontsize=16)
 plt.title('Time series analysis with constant prediction horizon of {} days'.format(horizon), fontsize=16)
@@ -259,3 +263,5 @@ plt.legend(loc='upper left', shadow=False, ncol=1)
 plt.show()  
 
 #-----------------------------------------------------------------------------------------------------------------------------------
+
+
