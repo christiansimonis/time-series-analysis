@@ -5,7 +5,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------
 __author__ = "Christian Simonis"
 __copyright__ = "Copyright 2021"
-__version__ = "1.0"
+__version__ = "1.1"
 __maintainer__ = "Christian Simonis"
 __email__ = "christian.Simonis.1989@gmail.com"
 __status__ = "work in progress"
@@ -291,6 +291,8 @@ class Stock_Analysis:
         plt.plot(Time_test,forecast_future,'k-.',linewidth=2, label = 'Forecast with Prediction Model')
         plt.fill(np.concatenate([Time_test, Time_test[::-1]]),np.concatenate([forecast_future - 3 * sigma_future,(forecast_future + 3 * sigma_future)[::-1]]),
                  alpha=.2, fc='g', ec='None', label='99% confidence interval for prediction')
+        plt.fill(np.concatenate([Time_test, Time_test[::-1]]),np.concatenate([forecast_future -  1 * sigma_future,(forecast_future + 1 * sigma_future)[::-1]]),
+                 alpha=.5, fc='g', ec='None', label='68% confidence interval for prediction')
         plt.scatter(Time,Stock, label = Stock_Name, c="coral")
         plt.xlabel('Time', fontsize=16)
         plt.ylabel('Closing Price', fontsize=16)
